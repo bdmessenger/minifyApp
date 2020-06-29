@@ -32,7 +32,7 @@ app.use(function(req, res, next) {
 app.get('/', (req,res) => {
     const content = renderToString(<App/>);
     const response = template("Minify App", content);
-    res.setHeader('Cache-Control', 'assets, max-age=604800');
+    res.setHeader('Cache-Control', 'public, max-age=604800');
     res.send(response);
 });
 
