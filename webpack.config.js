@@ -23,7 +23,7 @@ const serverConfig = {
     entry: './index.js',
     target: 'node',
     node:{
-        __dirname:false
+        __dirname: false
     },
     devtool: "source-map",
     externals: [nodeExternals()],
