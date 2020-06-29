@@ -25,7 +25,6 @@ const serverConfig = {
     node:{
         __dirname: false
     },
-    devtool: "source-map",
     externals: [nodeExternals()],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -39,14 +38,7 @@ const serverConfig = {
                 use: 'babel-loader'
             }
         ]
-    },
-    plugins: [
-        new webpack.BannerPlugin({
-            banner: 'require("source-map-support").install();',
-            raw: true,
-            entryOnly: false
-        })
-    ]
+    }
 };
 
 module.exports = [clientConfig, serverConfig];
